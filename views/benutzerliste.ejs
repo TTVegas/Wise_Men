@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Benutzerdaten</title>
+</head>
+
+<body>
+    <table border="1">
+        <% for( var i=0; i < benutzer.length; i++) { %>
+        <tr>
+            <td><%= benutzer[i].id %></td>
+            <td><%= benutzer[i].email %></td>
+            <td><%= benutzer[i].benutzername %></td>
+            <td><%= benutzer[i].passwort %></td>
+        </tr>
+
+
+        <% } %>
+
+
+    </table>
+
+   <button> <a href="/registrieren">benutzer hinzufügen</a></button>
+
+  
+</body>
+
+</html>

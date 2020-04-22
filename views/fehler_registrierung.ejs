@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fehler</title>
+</head>
+
+<body>
+    <%if(passwort==null||email==null){%>
+        <p>- lehres email oder Passwort Feld</p><%}%>
+    <br>
+    <%if(!(email.includes('@'))){%>
+            <p>- invalide email</p><%}%>
+    <br>
+
+    <% if((passwort!=passwort_repeat)){ %>
+        <p>- Passwort bestätigung fehlgeschlagen oder Email/Benutzername bereits vergeben</p>
+      <% } else{ %> 
+        <p>- Email oder Benutzer bereits vergeben</p> 
+        
+     <% } %>
+     <br>
+
+    <a href="/registrieren"><button>Erneut versuchen</button></a>
+
+
+
+</body>
+
+</html>
