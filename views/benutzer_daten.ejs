@@ -6,6 +6,23 @@
     <body>
        <p>Anmeldung erfolgreich</p>
        <p>Benutzername: <%=benutzername%></p>
-       <a href="/login"><button>Neuer Versuch</button></a>
+       <p> Wählen sie in diesem Kreise, für einen Chat der kompetenten Art und Weise. </p>
+       <body>
+        <form action="/philosophers" method="POST">
+            <button type="submit">Philosophen</button>
+        </form>
+        <form action="/musicians" method="POST">
+            <button type="submit">Musiker</button>
+        </form>
+        <form action="/prophets" method="POST">
+            <button type="submit">Propheten</button>
+        </form>
+        <form action="/movie_charakters" method="POST">
+            <button type="submit">Film und Fiktion</button>
+        </form>
+
+    
+
+       <a href="/login"><button>zrück zum login</button></a>
     </body>
 </html>

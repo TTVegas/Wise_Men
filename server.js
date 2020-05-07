@@ -22,11 +22,6 @@ app.listen(3000, function () {
     console.log("listening in 3000")
 })
 
-//Formular zum hinzufügen eines benutzers
-app.get("/neu", function (req, res) {
-    res.sendFile(__dirname + "/views/neu.html")
-});
-
 
 //Post-Request fügt benutzer in Tabelle
 app.post("/neuerbenutzer", function (req, res) {
