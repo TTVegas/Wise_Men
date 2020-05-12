@@ -103,7 +103,8 @@ input[type=text], input[type=password] {
   }
 
   #philosophers {
-    background-image: url(/static/philosophers.jpg);
+    background-image: url(/static/philosophers_298x298.jpg);
+    background-repeat: no-repeat;
     color: #752929;
     padding: 130px;
     float: left;
@@ -111,7 +112,8 @@ input[type=text], input[type=password] {
   }
 
   #musicians {
-    background-image: url(/static/musiker.jpg);
+    background-image: url(/static/musiker_298x298.jpg);
+    background-repeat: no-repeat;
     color: #752929;
     padding: 130px;
     float: left;
@@ -119,7 +121,8 @@ input[type=text], input[type=password] {
   }
 
   #prophets {
-    background-image: url(/static/propheten.jpg);
+    background-image: url(/static/propheten_298x298.jpg);
+    background-repeat: no-repeat;
     color: #752929;
     padding: 130px;
     float: left;
@@ -127,9 +130,15 @@ input[type=text], input[type=password] {
   }
 
   #movie_charakters {
-    background-image: url(/static/movie_charakters.png);
-    color: #752929;
+    background-image: url(/static/movie_charakters_298.png);
     background-repeat: no-repeat;
-    padding: 130px 70px;
+    color: #752929;
+    padding: 130px;
     margin: 40px 0 0 85px;;
+  }
+
+  #img_text {
+    text-align: center;
+    color: #752929;
+    font-size: 20px;
   }

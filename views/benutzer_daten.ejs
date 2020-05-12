@@ -10,19 +10,31 @@
 
             <h1>Willkommen <%=benutzername%></h1>
             <h2> Wählen sie in diesem Kreise, für einen Chat der kompetenten Art und Weise. </h2>
-            <form action="/philosophers" method="POST">
-                <button id="philosophers" type="submit">Philosophen</button>
-            </form>
-            <form action="/musicians" method="POST">
-                <button id="musicians" type="submit">Musiker</button>
-            </form>
-            <form action="/prophets" method="POST">
-                <button id="prophets" type="submit">Propheten</button>
-            </form>
-            <form action="/movie_charakters" method="POST">
-                <button id="movie_charakters" type="submit">Film und Fiktion</button>
-            </form>
 
+            <div>
+                <form action="/philosophers" method="POST">
+                    <button id="philosophers" type="submit">Philosophen</button>
+                </form>
+            </div>
+
+            <div>
+                <form action="/musicians" method="POST">
+                    <button id="musicians" type="submit">Musiker</button>
+                </form>
+            </div>
+
+            <div>
+                <form action="/prophets" method="POST">
+                    <button id="prophets" type="submit"></button>
+                    <span id="img_text">Propheten</span>
+                </form>
+            </div>
+
+            <div>
+                <form action="/movie_charakters" method="POST">
+                    <button id="movie_charakters" type="submit">Filmfiguren</button>
+                </form>
+            </div>
         </div>
 
        <a href="/login"><button>zrück zum login</button></a>
