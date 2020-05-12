@@ -34,6 +34,7 @@ h1 {
 }
 
 input[type=text], input[type=password] {
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
     background-color: #8D6666;
     width: 80%;
     padding: 20px 20px;
@@ -45,6 +46,7 @@ input[type=text], input[type=password] {
   }
 
   button {
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
     background: #752929;
     color: white;
     padding: 14px 20px;
@@ -57,6 +59,12 @@ input[type=text], input[type=password] {
 
   button:hover {
     opacity: 0.8;
+    background: #B9A8A8;
+  }
+
+  #check:hover {
+    opacity: 0.8;
+    background: #707070;
   }
 
   button[type=submit] {
@@ -70,4 +78,8 @@ input[type=text], input[type=password] {
   #register {
     font-size: 33px;
     padding: 20px 20px;
+  }
+
+  #check {
+    margin: 0 0 0 75%;
   }

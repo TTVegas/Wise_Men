@@ -5,25 +5,41 @@
 
 <body>
     <form action="/reg" method="POST">
-        <fieldset>
-            <legend>Regestrieren</legend>
-            <p>
-                <label>Email:<input type="text" name="email" size="40"></label>
-            </p>
-            <p>
-                <label>Benutzername:<input type="text" name="benutzername" size="40"></label>
-            </p>
+            <h1>Regestrieren</h1>
+            <div id="rahmen">
+            
+                <button id="check"> <a href="/benutzerliste"></a>Benutzer anzeigen</button>
 
-            <p>
-                <label>Passwort:<input type="password" name="passwort" size="40"></label>
-            </p>
-            <p>
-                <label>Wiederholen:<input type="password" name="passwort_repeat" size="40"></label>
-            </p>
-        </fieldset>
-        <button type="submit">Prüfen</button>
-        <button> <a href="/benutzerliste"></a>benutzer anzeigen</button>
-        <button> <a href="/login">login</a></button>
+                <div id="user-field">
+                    <p>
+                        <label id="label-user">Email:</label>
+                        <input type="text" name="email" size="40">
+                    </p>
+                </div>
+
+                <div id="user-field">
+                    <p>
+                        <label id="label-user">Benutzername:</label>
+                        <input type="text" name="benutzername" size="40">
+                    </p>
+                </div>
+
+                <div id="passwort-field">
+                    <p>
+                        <label id="label-pw">Passwort:</label>
+                        <input type="password" name="passwort" size="40">
+                    </p>
+                </div>
+
+                <div id="passwort-field">
+                    <p>
+                        <label id="label-pw">Wiederholen:</label>
+                        <input type="password" name="passwort_repeat" size="40">
+                    </p>
+                </div>
+            </div>
+        <button type="submit">regestrieren</button>
+        <button id="register"> <a href="/login" style="text-decoration: none; color: #707070;">zum login</a></button>
 
         
 
