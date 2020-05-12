@@ -104,29 +104,32 @@ input[type=text], input[type=password] {
 
   #philosophers {
     background-image: url(/static/philosophers.jpg);
+    color: #752929;
     padding: 130px;
     float: left;
-    margin: 0 0 0 0;
+    margin: 40px 0 0 0;
   }
 
   #musicians {
     background-image: url(/static/musiker.jpg);
+    color: #752929;
     padding: 130px;
     float: left;
-    margin: 0 0 0 5px;
+    margin: 40px 0 0 85px;
   }
 
   #prophets {
     background-image: url(/static/propheten.jpg);
+    color: #752929;
     padding: 130px;
     float: left;
-    margin: 0 0 0 5px;
+    margin: 40px 0 0 85px;
   }
 
   #movie_charakters {
-    background-image: url(/static/film_charakters.png);
+    background-image: url(/static/movie_charakters.png);
+    color: #752929;
     background-repeat: no-repeat;
     padding: 130px 70px;
-    float: left;
-    margin: 0 0 0 5px;;
+    margin: 40px 0 0 85px;;
   }
