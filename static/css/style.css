@@ -1,0 +1,72 @@
+body {
+    background-color: #707070;
+}
+
+h1 {
+    text-align: center;
+    color: #752929;
+    font-size: 50px;
+}
+
+#rahmen {
+    width: 75%;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 3px 15px 5px 30px;
+    background: #B9A8A8;
+    margin: 2% 12.5%;
+}
+
+#label-pw, #label-user {
+    color: #707070;
+    clear: both;
+    float: left;
+    margin: 10px 0px 10px 20px;
+    font-size: 33px;
+}
+
+#passwort-field, #user-field {
+    background-color: #752929;
+    border-radius: 15px 15px 15px 15px;
+    width: 90%;
+    margin: 5%;
+}
+
+input[type=text], input[type=password] {
+    background-color: #8D6666;
+    width: 80%;
+    padding: 20px 20px;
+    margin: 8px 20%;
+    border-radius: 0px 15px 15px 0px;
+    box-sizing: border-box;
+    display: block;
+    
+  }
+
+  button {
+    background: #752929;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 15px 15px 15px 15px;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  button[type=submit] {
+    color: #707070;
+    font-size: 33px;
+    margin: 20px;
+    margin: 0 50px 0 45%;
+    padding: 20px 20px;;
+  }
+  
+  #register {
+    font-size: 33px;
+    padding: 20px 20px;
+  }

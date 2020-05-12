@@ -98,6 +98,8 @@ app.post('/pruefung', function (req, res) {
 
 });
 
+app.use("/static", express.static('static'));
+
 /*app.post('/pruefung',function(req,res){
     const param_benutzername = req.body.benutzername;
     const param_passwort = req.body.passwort;
