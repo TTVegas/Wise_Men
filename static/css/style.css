@@ -9,6 +9,12 @@ h1 {
     font-size: 50px;
 }
 
+h2 {
+    text-align: center;
+    color: #752929;
+    font-size: 40px;
+}
+
 #rahmen {
     width: 75%;
     padding: 50px;
@@ -82,4 +88,45 @@ input[type=text], input[type=password] {
 
   #check {
     margin: 0 0 0 75%;
+  }
+
+  #erneut {
+    font-size: 33px;
+    padding: 20px 50px;
+    margin: 0 0 0 40%;
+  }
+
+  #hover_grau:hover {
+    opacity: 0.8;
+    background: #707070;
+    margin: 0 0 0 40%;
+  }
+
+  #philosophers {
+    background-image: url(/static/philosophers.jpg);
+    padding: 130px;
+    float: left;
+    margin: 0 0 0 0;
+  }
+
+  #musicians {
+    background-image: url(/static/musiker.jpg);
+    padding: 130px;
+    float: left;
+    margin: 0 0 0 5px;
+  }
+
+  #prophets {
+    background-image: url(/static/propheten.jpg);
+    padding: 130px;
+    float: left;
+    margin: 0 0 0 5px;
+  }
+
+  #movie_charakters {
+    background-image: url(/static/film_charakters.png);
+    background-repeat: no-repeat;
+    padding: 130px 70px;
+    float: left;
+    margin: 0 0 0 5px;;
   }

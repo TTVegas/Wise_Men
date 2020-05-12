@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
         <title>Formularauswertung</title>
     </head>
     <body>
-       <p>Anmeldung erfolgreich</p>
-       <p>Benutzername: <%=benutzername%></p>
-       <p> Wählen sie in diesem Kreise, für einen Chat der kompetenten Art und Weise. </p>
-       <body>
-        <form action="/philosophers" method="POST">
-            <button type="submit">Philosophen</button>
-        </form>
-        <form action="/musicians" method="POST">
-            <button type="submit">Musiker</button>
-        </form>
-        <form action="/prophets" method="POST">
-            <button type="submit">Propheten</button>
-        </form>
-        <form action="/movie_charakters" method="POST">
-            <button type="submit">Film und Fiktion</button>
-        </form>
+        <p>Anmeldung erfolgreich</p>
+        <div id="rahmen">
 
-    
+            <h1>Willkommen <%=benutzername%></h1>
+            <h2> Wählen sie in diesem Kreise, für einen Chat der kompetenten Art und Weise. </h2>
+            <form action="/philosophers" method="POST">
+                <button id="philosophers" type="submit">Philosophen</button>
+            </form>
+            <form action="/musicians" method="POST">
+                <button id="musicians" type="submit">Musiker</button>
+            </form>
+            <form action="/prophets" method="POST">
+                <button id="prophets" type="submit">Propheten</button>
+            </form>
+            <form action="/movie_charakters" method="POST">
+                <button id="movie_charakters" type="submit">Film und Fiktion</button>
+            </form>
+
+        </div>
 
        <a href="/login"><button>zrück zum login</button></a>
     </body>
