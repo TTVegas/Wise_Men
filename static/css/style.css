@@ -1,6 +1,6 @@
 body {
     background-color: #707070;
-    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    font-family: Calibri, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
 }
 
 h1 {
@@ -49,7 +49,7 @@ a:hover {
 }
 
 input[type=text], input[type=password] {
-    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    font-family: Calibri, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
     background-color: #8D6666;
     width: 80%;
     padding: 20px 20px;
@@ -61,7 +61,7 @@ input[type=text], input[type=password] {
   }
 
   button {
-    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    font-family: Calibri, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
     background: #752929;
     color: white;
     padding: 14px 20px;
@@ -91,7 +91,7 @@ input[type=text], input[type=password] {
   }
 
   #link_to_button {
-    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    font-family: Calibri, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
     font-size: 33px;
     background: #752929;
     color: #707070;
