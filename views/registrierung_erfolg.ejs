@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
         <title>Formularauswertung</title>
     </head>
     <body>
-       <p>Registrierung erfolgreich</p>
-       <p>Email: <%=email%></p>
-       <p>User: <%=benutzername%></p>
-       <a href="/registrieren"><button>Neuer Benutzer</button></a>
-    
+        <div id="rahmen">
+            <h2>Registrierung erfolgreich</h2>
+            <h2>Email: <%=email%></h2>
+            <h2>User: <%=benutzername%></h2>
+            <a href="/login"><button id="hover_grau">zum login</button></a>
+        </div>            
     </body>
 </html>

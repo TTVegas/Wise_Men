@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
         <title>login</title>
     </head>
     <body>
         <form action="/pruefung" method="POST">
-        <fieldset>
-            <legend>Anmeldung</legend>
-            <p>
-                <label>Benutzername:<input type="text" name="benutzername" size="40"></label>
-            </p>
-            <p>
-                <label>Passwort:<input type="password" name="passwort" size="40"></label>
-            </p>
-            </fieldset>  
+            <h1>Anmeldung</h1>
+            <div id="rahmen">
+            <div id="user-field">
+                <p>
+                    <label id="label-user">Benutzername:</label>
+                    <input type="text" name="benutzername" size="40">
+                </p>
+            </div>
+            
+            <div id="passwort-field">
+                <p>
+                    <label id="label-pw">Passwort:</label>
+                    <input type="password" name="passwort" size="40">
+                </p> 
+            </div>
+            
             <br>
+            </div>
             <button type="submit">anmelden</button>
-            <button> <a href="/registrieren">Registrieren</a></button>
+            <a id="link_to_button" href="/registrieren">registrieren</a>
         </form>
     </body>
 </html>

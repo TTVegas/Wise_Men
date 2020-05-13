@@ -1,0 +1,229 @@
+body {
+    background-color: #707070;
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+h1 {
+    text-align: center;
+    color: #752929;
+    font-size: 50px;
+}
+
+h2 {
+    text-align: center;
+    color: #752929;
+    font-size: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: #707070;
+}
+
+a:hover {
+  color: #752929;
+}
+
+#rahmen {
+    width: 75%;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 3px 15px 5px 30px;
+    background: #B9A8A8;
+    margin: 2% 12.5%;
+}
+
+#label-pw, #label-user {
+    color: #707070;
+    clear: both;
+    float: left;
+    margin: 10px 0px 10px 20px;
+    font-size: 33px;
+}
+
+#passwort-field, #user-field {
+    background-color: #752929;
+    border-radius: 15px 15px 15px 15px;
+    width: 90%;
+    margin: 5%;
+}
+
+input[type=text], input[type=password] {
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    background-color: #8D6666;
+    width: 80%;
+    padding: 20px 20px;
+    margin: 8px 20%;
+    border-radius: 0px 15px 15px 0px;
+    box-sizing: border-box;
+    display: block;
+    
+  }
+
+  button {
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    background: #752929;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 15px 15px 15px 15px;
+  }
+
+  button:hover {
+    opacity: 0.8;
+    background: #B9A8A8;
+    color: #752929;
+  }
+
+  button[type=submit] {
+    color: #707070;
+    font-size: 33px;
+    margin: 20px;
+    margin: 0 50px 0 55.8%;
+    padding: 20px 20px;;
+  }
+
+  button[type=submit]:hover {
+    color: #752929;
+  }
+
+  #link_to_button {
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    font-size: 33px;
+    background: #752929;
+    color: #707070;
+    padding: 20px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 15px 15px 15px 15px;
+  }
+
+  #link_to_button:hover {
+    opacity: 0.8;
+    background: #B9A8A8;
+    color: #752929;
+  }
+  
+  #register {
+    font-size: 33px;
+    padding: 20px 20px;
+    color: #707070;
+  }
+
+  #back {
+    font-size: 33px;
+    padding: 20px 20px;
+    margin: 0 50px 0 67.5%;
+    color: #707070;
+  }
+
+  #back:hover {
+    background: #B9A8A8;
+    color: #752929;
+  }
+
+  #check {
+    margin: 0 0 0 75%;
+  }
+
+  #check:hover {
+    opacity: 0.8;
+    background: #707070;
+  }
+
+  #hover_grau:hover {
+    opacity: 0.8;
+    background: #707070;
+    margin: 0 0 0 40%;
+  }
+
+  #erneut {
+    font-size: 33px;
+    padding: 20px 50px;
+    margin: 0 0 0 40%;
+    color: #B9A8A8;
+  }
+
+  #erneut:hover {
+    opacity: 0.8;
+    background: #707070;
+    color: #752929;
+  }
+
+
+  /*Auswahlbuttons der Kategorien (Bilder)*/
+  #philosophers {
+    background-image: url(/static/philosophers_298x298.jpg);
+    background-repeat: no-repeat;
+    color: #752929;
+    padding: 130px;
+    float: left;
+    margin: 40px 0 0 0;
+    border-radius: 3px 15px 15px 15px;
+    position: relative;
+  }
+
+  #philosophers:hover {
+    background-image: url(/static/Philosophen_hover_298x298.png);
+    
+  }
+
+  #philosophers:after {
+    content: "";
+    background-color: #333;
+    display: block;
+    height: 0;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transition: .3s;
+    width: 0;
+    z-index:-1;
+  }
+
+  #musicians {
+    background-image: url(/static/musiker_298x298.jpg);
+    background-repeat: no-repeat;
+    color: #752929;
+    padding: 130px;
+    float: left;
+    margin: 40px 0 0 85px;
+  }
+
+  #musicians:hover {
+    background-image: url(/static/musiker_hover_298x298.png);
+    
+  }
+
+  #prophets {
+    background-image: url(/static/propheten_298x298.jpg);
+    background-repeat: no-repeat;
+    color: #752929;
+    padding: 130px;
+    float: left;
+    margin: 40px 0 0 85px;
+  }
+
+  #prophets:hover {
+    background-image: url(/static/Propheten_hover_298x298.png);
+    
+  }
+
+  #movie_charakters {
+    background-image: url(/static/movie_charakters_298.png);
+    background-repeat: no-repeat;
+    color: #752929;
+    padding: 130px;
+    margin: 40px 0 0 85px;;
+    border-radius: 15px 15px 5px 15px;
+  }
+
+  #movie_charakters:hover {
+    background-image: url(/static/movie_charakters_hover_298x298.png);
+    
+  }

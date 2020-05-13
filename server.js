@@ -65,7 +65,7 @@ app.post('/reg', function (req, res) {
         function (err, rows) { 
             if (rows.length > 0) {  res.render('fehler_registrierung', { email: req.body["email"], passwort: req.body["passwort"], passwort_repeat:["passwort_repeat"] }); } 
             else db.run(
-                `INSERT INTO benutzer_daten(email,benutzername,passwort) VAlUES("${param_email }","${param_benutzername }",${param_passwort})`,
+                `INSERT INTO benutzer_daten(email,benutzername,passwort) VAlUES('${param_email }','${param_benutzername }','${param_passwort}')`,
                 function (err) {
         
                     res.render('registrierung_erfolg', { email: req.body["email"], benutzername: req.body["benutzername"] });
@@ -97,6 +97,8 @@ app.post('/pruefung', function (req, res) {
 
 
 });
+
+app.use("/static", express.static('static'));
 
 /*app.post('/pruefung',function(req,res){
     const param_benutzername = req.body.benutzername;
