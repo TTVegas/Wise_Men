@@ -7,23 +7,24 @@
 </head>
 
 <body>
-    <%if(passwort==null||email==null){%>
-        <p>- lehres email oder Passwort Feld</p><%}%>
-    <br>
-    <%if(!(email.includes('@'))){%>
-            <p>- invalide email</p><%}%>
-    <br>
+    <div id="rahmen">
+        <%if(passwort==null||email==null){%>
+            <h2>- lehres email oder Passwort Feld</h2><%}%>
+        <br>
+        <%if(!(email.includes('@'))){%>
+            <h2>- invalide email</h2><%}%>
+        <br>
 
-    <% if((passwort!=passwort_repeat)){ %>
-        <p>- Passwort bestätigung fehlgeschlagen oder Email/Benutzername bereits vergeben</p>
-      <% } else{ %> 
-        <p>- Email oder Benutzer bereits vergeben</p> 
+        <% if((passwort!=passwort_repeat)){ %>
+            <h2>- Passwort bestätigung fehlgeschlagen oder Email/Benutzername bereits vergeben</h2>
+        <% } else{ %> 
+            <h2>- Email oder Benutzer bereits vergeben</h2> 
         
-     <% } %>
-     <br>
+        <% } %>
+        <br>
 
-    <a href="/registrieren"><button>Erneut versuchen</button></a>
-
+        <a href="/registrieren"><button id="erneut">Erneut versuchen</button></a>
+    </div>
 
 
 </body>

@@ -5,7 +5,6 @@
         <title>Formularauswertung</title>
     </head>
     <body>
-        <p>Anmeldung erfolgreich</p>
         <div id="rahmen">
 
             <h1>Willkommen <%=benutzername%></h1>
@@ -13,30 +12,29 @@
 
             <div>
                 <form action="/philosophers" method="POST">
-                    <button id="philosophers" type="submit">Philosophen</button>
+                    <button id="philosophers" type="submit"></button>
                 </form>
             </div>
 
             <div>
                 <form action="/musicians" method="POST">
-                    <button id="musicians" type="submit">Musiker</button>
+                    <button id="musicians" type="submit"></button>
                 </form>
             </div>
 
             <div>
                 <form action="/prophets" method="POST">
                     <button id="prophets" type="submit"></button>
-                    <span id="img_text">Propheten</span>
                 </form>
             </div>
 
             <div>
                 <form action="/movie_charakters" method="POST">
-                    <button id="movie_charakters" type="submit">Filmfiguren</button>
+                    <button id="movie_charakters" type="submit"></button>
                 </form>
             </div>
         </div>
 
-       <a href="/login"><button>zrück zum login</button></a>
+       <a href="/login"><button id="back">zrück zum login</button></a>
     </body>
 </html>
