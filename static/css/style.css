@@ -16,6 +16,7 @@ h2 {
 }
 
 a {
+  font-family: Calibri, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
   text-decoration: none;
   color: #707070;
 }
@@ -63,7 +64,6 @@ input[type=text], input[type=password] {
   button {
     font-family: Calibri, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
     background: #752929;
-    color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -171,19 +171,6 @@ input[type=text], input[type=password] {
   #philosophers:hover {
     background-image: url(/static/Philosophen_hover_298x298.png);
     
-  }
-
-  #philosophers:after {
-    content: "";
-    background-color: #333;
-    display: block;
-    height: 0;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transition: .3s;
-    width: 0;
-    z-index:-1;
   }
 
   #musicians {
