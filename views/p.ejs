@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <title>philosophers</title>
+</head>
+
+<body>
+    <table border="1">
+        <% for( var i=0; i < philosophers.length; i++) { %>
+        <tr>
+            <td><%= philosophers[i].keyword %></td>
+            <td><%= philosophers[i].id %></td>
+            <td><%= philosophers[i].name %></td>
+            <td><%= philosophers[i].quote %></td>
+        </tr>
+
+
+        <% } %>
+
+
+    </table>
+
+
+  
+</body>
+
+</html>

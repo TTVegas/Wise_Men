@@ -100,6 +100,51 @@ app.post('/pruefung', function (req, res) {
 
 app.use("/static", express.static('static'));
 
+
+app.post('/philosophers', function(req,res){
+    res.sendFile(__dirname+"/views/chatroom_philosophers.html");
+})
+
+app.post('/Frage_philosophen', function(req,res){
+    var param_frage = req.body["Frage"].toString()
+    const id_answer= Math.floor((Math.random() * 6) + 1);
+    const keyword = keyword_finder(param_frage);
+    db.all(` SELECT * FROM philosophers WHERE keyword="${keyword}" AND id="${id_answer}"`, 
+    function (err, rows) { 
+        console.log(rows)
+    });
+
+})
+
+
+//Trennt den satz und sucht nach stichwörtern
+
+function keyword_finder (param_frage) {
+    var split_string = param_frage.split(" ")
+    var keyword="null"
+    console.log(split_string)
+    const keywords= ["Tod","Liebe","Sinn","Arbeiten","Bildung","Hoffnung"]
+    for (i=0;i<split_string.length;i++){
+        console.log(split_string[i])
+        for (j=0;j<keywords.length;j++){
+            console.log(keywords[j])
+          if (split_string[i]==keywords[j]){
+              keyword=keywords[j]
+          }
+    }
+} 
+return keyword
+}
+
+//Anzeige der philosophen
+app.get("/philosophen", function (req, res) {
+    db.all(`SELECT * FROM philosophers`,
+        function (err, rows) {
+            res.render("p", { "philosophers": rows });
+
+        });
+});
+  
 /*app.post('/pruefung',function(req,res){
     const param_benutzername = req.body.benutzername;
     const param_passwort = req.body.passwort;
