@@ -107,7 +107,7 @@ app.post('/philosophers', function(req,res){
 
 app.post('/Frage_philosophen', function(req,res){
     var param_frage = req.body["Frage"].toString()
-    const id_answer= Math.floor((Math.random() * 6) + 1);
+    const id_answer= Math.floor((Math.random() * 5) + 1);
     const keyword = keyword_finder(param_frage);
     db.all(` SELECT * FROM philosophers WHERE keyword="${keyword}" AND id="${id_answer}"`, 
     function (err, rows) { 
@@ -130,6 +130,7 @@ function keyword_finder (param_frage) {
             console.log(keywords[j])
           if (split_string[i]==keywords[j]){
               keyword=keywords[j]
+              break
           }
     }
 } 
