@@ -50,7 +50,7 @@ app.get("/benutzerliste", function (req, res) {
 //Regestrieren
 app.get( "/registrieren", function (req, res) {
     res.sendFile(__dirname + "/views/registrieren.html")
-})
+});
 
 app.post('/reg', function (req, res) {
     const param_email = req.body.email;
@@ -105,37 +105,23 @@ app.post('/philosophers', function(req,res){
     res.sendFile(__dirname+"/views/chatroom_philosophers.html");
 })
 
-app.post('/Frage_philosophen', function(req,res){
-    var param_frage = req.body["Frage"].toString()
+app.get('/Frage_philosophen', function(req,res){
     const id_answer= Math.floor((Math.random() * 5) + 1);
-    const keyword = keyword_finder(param_frage);
+    const keyword = req.query.Frage;
+    
+
     db.all(` SELECT * FROM philosophers WHERE keyword="${keyword}" AND id="${id_answer}"`, 
     function (err, rows) { 
-        console.log(rows)
+        console.log("2");
+        
+        res.send(JSON.stringify(rows));
+        console.log(rows);
     });
 
 })
 
 
-//Trennt den satz und sucht nach stichwörtern
 
-function keyword_finder (param_frage) {
-    var split_string = param_frage.split(" ")
-    var keyword="null"
-    console.log(split_string)
-    const keywords= ["Tod","Liebe","Sinn","Arbeiten","Bildung","Hoffnung"]
-    for (i=0;i<split_string.length;i++){
-        console.log(split_string[i])
-        for (j=0;j<keywords.length;j++){
-            console.log(keywords[j])
-          if (split_string[i]==keywords[j]){
-              keyword=keywords[j]
-              break
-          }
-    }
-} 
-return keyword
-}
 
 //Anzeige der philosophen
 app.get("/philosophen", function (req, res) {
@@ -146,7 +132,29 @@ app.get("/philosophen", function (req, res) {
         });
 });
   
-/*app.post('/pruefung',function(req,res){
+// Von Ben - AJAX Implementierung
+//app.get("/", function (req, res) {
+//    res.json(__dirname + "/temp.json")
+//});
+
+
+
+
+/*
+function(err, rows) {
+    var jsonObject = JSON.stringify(rows);
+
+    const fs = require('fs');
+    fs.writeFile("/temp.json", jsonObject, function(err) {
+        if(err) {
+            return console.log(err);
+        }
+        console.log("Die Datei wurde gespeichert");
+    });
+});
+
+
+app.post('/pruefung',function(req,res){
     const param_benutzername = req.body.benutzername;
     const param_passwort = req.body.passwort;
     db.each(`SELECT * FROM benutzer_daten WHERE benutzername='${param_benutzername}' AND passwort='${param_passwort}'`, (err, row) => { 
@@ -160,7 +168,10 @@ app.get("/philosophen", function (req, res) {
 
 
 }
-)})*/
+)})
+
+*/
+
 
 
 

@@ -8,13 +8,14 @@
         <div id="rahmen">
             <h1>Herzlich willkommen Fragender</h1>
             <h2>Ein Gespräch mit weiser Kunde folgt nun in gepflegter Runde</h2>
-            <p> Immanuel Kant,Kong Fuzi, Platon,Aristoteles, Nietsche sind beigetreten.</p>
+            <p><h4> Immanuel Kant,Kong Fuzi, Platon,Aristoteles und Nietsche sind beigetreten.</h4></p>
 
+            <div id="chatfenster"></div>
 
             <p>
-            <form action="/Frage_philosophen" method="POST">
+            <form action="/Frage_philosophen">
                 <label for="Frage">Wählt weise Fragender :</label>
-                <select name="Frage">
+                <select id="select" name="Frage">
                     <option >Was ist der Sinn des Lebens ?</option>
                     <option  >Warum ist Bildung wichtig ?</option>
                     <option  >Was denkt ihr über den Tod ?</option>
@@ -22,22 +23,20 @@
                     <option  >Was motiviert mich zum Arbeiten ?</option>
                     <option >Die Zukunft ist finster wie bekomme ich Hoffnung ?</option>
                 </select>
-                <button type="submit">senden</button>
+                <button id="btn_frage" type="button">senden</button>
             </form>
 
-            <form action="/Frage_philosophen" method="POST">
-
-                <input type="text" name="Frage" size="40">
-                <button type="submit">abschicken</button>
-            </form>
         </div>
 
         </p>
         
-    
+        
         
 
 
-
+        <script src="/static/js/chat.js"></script>
     </body>
+
+
+
 </html>

@@ -214,3 +214,14 @@ input[type=text], input[type=password] {
     background-image: url(/static/movie_charakters_hover_298x298.png);
     
   }
+
+
+  #chatfenster {
+    width: 75%;
+    height: 70%;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 3px 15px 5px 30px;
+    background: rgb(255, 255, 255);
+    margin: 2% 12.5%;
+  }
