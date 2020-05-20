@@ -259,7 +259,6 @@ input[type=text], input[type=password] {
     padding: 50px;
     box-sizing: border-box;
     border-radius: 50px 50px 3px 3px;
-    background: rgb(255, 255, 255);
   }
 
   /*Für den IE*/

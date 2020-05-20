@@ -1,5 +1,6 @@
 var btn = document.getElementById("btn_frage");
-var chatFenster = document.getElementById("chatfenster");
+var chatFenster_antwort = document.getElementById("antwort");
+var chatFenster_frage = document.getElementById("frage");
 var select = document.getElementById("select");
 
 btn.addEventListener("click", function() {
@@ -8,6 +9,7 @@ btn.addEventListener("click", function() {
     var ourRequest = new XMLHttpRequest();
     
     var keyword = keyword_finder(getSelectedText("select"));
+    var frage = getSelectedText("select");
 
     var link = `http://localhost:3000/Frage_philosophen?Frage=${keyword}`
 
@@ -18,22 +20,28 @@ btn.addEventListener("click", function() {
     ourRequest.onload = function() {
         
         var ourData = JSON.parse(ourRequest.responseText);
-        renderHTML(ourData);
+        renderHTML_frage(frage);
+        renderHTML_antwort(ourData);
         };
 
     ourRequest.send();
 });
 
 
-function renderHTML(data) {
-    var htmlString = "";
+function renderHTML_antwort(data) {
+    var htmlString_antwort = "";
 
-    console.log("1");
     for (i = 0; i < data.length; i++) {
-        htmlString += "<p><h2>" + data[i].name + " schreibt: </h2><h3>" + data[i].quote + ".</h3></p>";
+        htmlString_antwort += "<p><h2>" + data[i].name + " schreibt: </h2><h3>" + data[i].quote + ".</h3></p>";
     }
 
-    chatFenster.insertAdjacentHTML('beforeend', htmlString);
+    chatFenster_antwort.insertAdjacentHTML('beforeend', htmlString_antwort);
+}
+
+function renderHTML_frage(frage) {
+    var htmlString_frage = frage;
+
+    chatFenster_frage.insertAdjacentHTML('beforeend', htmlString_frage);
 }
 
 

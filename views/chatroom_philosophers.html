@@ -10,18 +10,21 @@
             <h2>Ein Gespräch mit weiser Kunde folgt nun in gepflegter Runde</h2>
             <p><h4> Immanuel Kant,Kong Fuzi, Platon,Aristoteles und Nietsche sind beigetreten.</h4></p>
 
-            <div id="chatfenster"></div>
+            <div id="chatfenster">
+                <div id="frage"></div>
+                <div id="antwort"></div>
+            </div>
 
             
             <form action="/Frage_philosophen">
                 <label for="Frage">Wählt weise Fragender :</label>
                 <select id="select" name="Frage">
-                    <option >Was ist der Sinn des Lebens ?</option>
-                    <option >Warum ist Bildung wichtig ?</option>
-                    <option >Was denkt ihr über den Tod ?</option>
-                    <option >Wie sieht wahre Liebe aus ?</option>
-                    <option >Was motiviert mich zum Arbeiten ?</option>
-                    <option >Die Zukunft ist finster wie bekomme ich Hoffnung ?</option>
+                    <option id="1">Was ist der Sinn des Lebens ?</option>
+                    <option id="2">Warum ist Bildung wichtig ?</option>
+                    <option id="3">Was denkt ihr über den Tod ?</option>
+                    <option id="4">Wie sieht wahre Liebe aus ?</option>
+                    <option id="5">Was motiviert mich zum Arbeiten ?</option>
+                    <option id="6">Die Zukunft ist finster wie bekomme ich Hoffnung ?</option>
                 </select>
                 <button id="btn_frage" type="button">senden</button>
             </form>
