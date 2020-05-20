@@ -81,7 +81,7 @@ app.post('/reg', function (req, res) {
 
 app.get( "/login", function (req, res) {
     res.sendFile(__dirname + "/views/login.html")
-})
+});
 
 
 app.post('/pruefung', function (req, res) {
@@ -101,9 +101,10 @@ app.post('/pruefung', function (req, res) {
 app.use("/static", express.static('static'));
 
 
+//Chatfenster - Ab hier kopieren für andere Kategorien
 app.post('/philosophers', function(req,res){
     res.sendFile(__dirname+"/views/chatroom_philosophers.html");
-})
+});
 
 app.get('/Frage_philosophen', function(req,res){
     const id_answer= Math.floor((Math.random() * 5) + 1);
@@ -111,14 +112,11 @@ app.get('/Frage_philosophen', function(req,res){
     
 
     db.all(` SELECT * FROM philosophers WHERE keyword="${keyword}" AND id="${id_answer}"`, 
-    function (err, rows) { 
-        console.log("2");
-        
+    function (err, rows) {         
         res.send(JSON.stringify(rows));
-        console.log(rows);
     });
 
-})
+});
 
 
 
@@ -131,48 +129,3 @@ app.get("/philosophen", function (req, res) {
 
         });
 });
-  
-// Von Ben - AJAX Implementierung
-//app.get("/", function (req, res) {
-//    res.json(__dirname + "/temp.json")
-//});
-
-
-
-
-/*
-function(err, rows) {
-    var jsonObject = JSON.stringify(rows);
-
-    const fs = require('fs');
-    fs.writeFile("/temp.json", jsonObject, function(err) {
-        if(err) {
-            return console.log(err);
-        }
-        console.log("Die Datei wurde gespeichert");
-    });
-});
-
-
-app.post('/pruefung',function(req,res){
-    const param_benutzername = req.body.benutzername;
-    const param_passwort = req.body.passwort;
-    db.each(`SELECT * FROM benutzer_daten WHERE benutzername='${param_benutzername}' AND passwort='${param_passwort}'`, (err, row) => { 
-        const benutzername= row.benutzername;
-        const passwort=row.passwort;
-        if (benutzername == param_benutzername && passwort == param_passwort) {
-            res.render('benutzer_daten', { benutzername: req.body["benutzername"] });
-        }
-        else res.sendFile(__dirname+"/views/fehler.html")
-
-
-
-}
-)})
-
-*/
-
-
-
-
-
