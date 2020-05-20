@@ -102,6 +102,7 @@ app.use("/static", express.static('static'));
 
 
 //Chatfenster - Ab hier kopieren für andere Kategorien
+//philosphen
 app.post('/philosophers', function(req,res){
     res.sendFile(__dirname+"/views/chatroom_philosophers.html");
 });
@@ -112,6 +113,59 @@ app.get('/Frage_philosophen', function(req,res){
     
 
     db.all(` SELECT * FROM philosophers WHERE keyword="${keyword}" AND id="${id_answer}"`, 
+    function (err, rows) {         
+        res.send(JSON.stringify(rows));
+    });
+
+});
+//musiker
+app.post('/musicians', function(req,res){
+    res.sendFile(__dirname+"/views/chatroom_Musiker.html");
+});
+
+app.get('/Frage_musiker', function(req,res){
+    const id_answer= Math.floor((Math.random() * 5) + 1);
+    const keyword = req.query.Frage;
+    
+
+    db.all(` SELECT * FROM musicians WHERE keyword="${keyword}" AND random_id="${id_answer}"`, 
+    function (err, rows) {         
+        res.send(JSON.stringify(rows));
+    });
+
+});
+
+//propheten
+
+app.post('/prophets', function(req,res){
+    res.sendFile(__dirname+"/views/chatroom_Propheten.html");
+});
+
+app.get('/Frage_propheten', function(req,res){
+    const id_answer= Math.floor((Math.random() * 5) + 1);
+    const keyword = req.query.Frage;
+    
+
+    db.all(` SELECT * FROM prophets WHERE keyword="${keyword}" AND random_id="${id_answer}"`, 
+    function (err, rows) {         
+        res.send(JSON.stringify(rows));
+    });
+
+});
+
+
+
+//movie_charakters
+app.post('/movie_charakters', function(req,res){
+    res.sendFile(__dirname+"/views/chatroom_film.html");
+});
+
+app.get('/Frage_film', function(req,res){
+    const id_answer= Math.floor((Math.random() * 5) + 1);
+    const keyword = req.query.Frage;
+    
+
+    db.all(` SELECT * FROM movie_characters WHERE keyword="${keyword}" AND random_id="${id_answer}"`, 
     function (err, rows) {         
         res.send(JSON.stringify(rows));
     });
