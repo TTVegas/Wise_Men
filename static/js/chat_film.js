@@ -4,7 +4,6 @@ var select = document.getElementById("select");
 
 btn.addEventListener("click", function() {
     
-    
     var ourRequest = new XMLHttpRequest();
     
     var keyword = keyword_finder(getSelectedText("select"));

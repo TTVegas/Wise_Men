@@ -145,8 +145,7 @@ app.get('/Frage_propheten', function(req,res){
     const id_answer= Math.floor((Math.random() * 5) + 1);
     const keyword = req.query.Frage;
     
-    const frage = req.query.Frage;
-    res.send(frage);
+   
 
     db.all(` SELECT * FROM prophets WHERE keyword="${keyword}" AND random_id="${id_answer}"`, 
     function (err, rows) {         
