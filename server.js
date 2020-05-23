@@ -118,6 +118,7 @@ app.get('/Frage_philosophen', function(req,res){
     });
 
 });
+
 //musiker
 app.post('/musicians', function(req,res){
     res.sendFile(__dirname+"/views/chatroom_Musiker.html");
@@ -136,7 +137,6 @@ app.get('/Frage_musiker', function(req,res){
 });
 
 //propheten
-
 app.post('/prophets', function(req,res){
     res.sendFile(__dirname+"/views/chatroom_Propheten.html");
 });
