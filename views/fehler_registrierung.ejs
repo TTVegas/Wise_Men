@@ -9,14 +9,14 @@
 <body>
     <div id="rahmen">
         <%if(passwort==null||email==null){%>
-            <h2>- lehres email oder Passwort Feld</h2><%}%>
+            <h2>- leeres Email oder Passwort Feld</h2><%}%>
         <br>
         <%if(!(email.includes('@'))){%>
-            <h2>- invalide email</h2><%}%>
+            <h2>- invalide Email</h2><%}%>
         <br>
 
         <% if((passwort!=passwort_repeat)){ %>
-            <h2>- Passwort bestätigung fehlgeschlagen oder Email/Benutzername bereits vergeben</h2>
+            <h2>- Passwort Bestätigung fehlgeschlagen oder Email/Benutzername bereits vergeben</h2>
         <% } else{ %> 
             <h2>- Email oder Benutzer bereits vergeben</h2> 
         
