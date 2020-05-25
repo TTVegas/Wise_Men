@@ -5,30 +5,32 @@
         <title>Chatroom der Filmfiguren</title>
     </head>
     <body>
-        <div id="rahmen">
-            <h1>Herzlich willkommen Fragender</h1>
-            <h2>Geschüttelt oder gerührt? Sehn' wir aus, als ob uns das interessiert? Stelle lieber weise Fragen...</h2>
-            <p><h4> Gandalf,Der Doctor, Sheev Palpatine,Dr. Henry Jones, Jr. und Dumbledore sind beigetreten.</h4></p>
+        <div id="hintergrund">
+            <div id="rahmen">
+                <h1>Herzlich Willkommen Fragender</h1>
+                <h2>Geschüttelt oder gerührt? Sehn' wir aus, als ob uns das interessiert? Stelle lieber weise Fragen...</h2>
+                
 
-            <div id="chatfenster"></div>
+                <div id="chatfenster">
+                    <p><h4> Gandalf, Der Doctor, Sheev Palpatine, Dr. Henry Jones Jr. und Dumbledore sind beigetreten.</h4></p>
+                    <div id="konversation"></div>
+                </div>
 
-            <p>
-            <form action="/Frage_film">
-                <label for="Frage">Wählt weise Fragender :</label>
-                <select id="select" name="Frage">
-                    <option >Was ist der Sinn des Lebens ?</option>
-                    <option  >Warum ist Bildung wichtig ?</option>
-                    <option  >Was denkt ihr über den Tod ?</option>
-                    <option  >Wie sieht wahre Liebe aus ?</option>
-                    <option  >Was motiviert mich zum Arbeiten ?</option>
-                    <option >Die Zukunft ist finster wie bekomme ich Hoffnung ?</option>
-                </select>
-                <button id="btn_frage" type="button">senden</button>
-            </form>
+                <form action="/Frage_film">
+                    <select id="select" name="Frage">
+                        <option value="" disabled selected>Wählt weise Fragender :</option>
+                        <option >Was ist der Sinn des Lebens ?</option>
+                        <option  >Warum ist Bildung wichtig ?</option>
+                        <option  >Was denkt ihr über den Tod ?</option>
+                        <option  >Wie sieht wahre Liebe aus ?</option>
+                        <option  >Was motiviert mich zum Arbeiten ?</option>
+                        <option >Die Zukunft ist finster wie bekomme ich Hoffnung ?</option>
+                    </select>
+                    <button id="btn_frage" type="button">senden</button>
+                </form>
 
+            </div>
         </div>
-
-        </p>
-        
+            
         <script src="/static/js/chat_film.js"></script>
     </body>

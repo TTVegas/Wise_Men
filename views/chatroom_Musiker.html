@@ -5,30 +5,33 @@
         <title>Chatroom der Musiker</title>
     </head>
     <body>
-        <div id="rahmen">
-            <h1>Herzlich willkommen Fragender</h1>
-            <h2>Momentan sind wir populärer als Jesus Christus, also frag schon...</h2>
-            <p><h4> Frank Zappa,Jimmy Hendrix, Ozzy Osbourne,Kurt Cobain und Janis Joplin sind beigetreten.</h4></p>
+        <div id="hintergrund">
+            <div id="rahmen">
+                <h1>Herzlich Willkommen Fragender</h1>
+                <h2>Momentan sind wir populärer als Jesus Christus, also frag schon...</h2>
 
-            <div id="chatfenster"></div>
+                <div id="chatfenster">
+                    <p><h4> Frank Zappa, Jimmy Hendrix, Ozzy Osbourne, Kurt Cobain und Janis Joplin sind beigetreten.</h4></p>
+                    <div id="konversation"></div>
+                </div>
 
-            <p>
-            <form action="/Frage_musiker">
-                <label for="Frage">Wählt weise Fragender :</label>
-                <select id="select" name="Frage">
-                    <option >Was ist der Sinn des Lebens ?</option>
-                    <option  >Warum ist Bildung wichtig ?</option>
-                    <option  >Was denkt ihr über den Tod ?</option>
-                    <option  >Wie sieht wahre Liebe aus ?</option>
-                    <option  >Was motiviert mich zum Arbeiten ?</option>
-                    <option >Die Zukunft ist finster wie bekomme ich Hoffnung ?</option>
-                </select>
-                <button id="btn_frage" type="button">senden</button>
-            </form>
+
+                <form action="/Frage_musiker">
+                    <select id="select" name="Frage">
+                        <option value="" disabled selected>Wählt weise Fragender :</option>
+                        <option >Was ist der Sinn des Lebens ?</option>
+                        <option  >Warum ist Bildung wichtig ?</option>
+                        <option  >Was denkt ihr über den Tod ?</option>
+                        <option  >Wie sieht wahre Liebe aus ?</option>
+                        <option  >Was motiviert mich zum Arbeiten ?</option>
+                        <option >Die Zukunft ist finster wie bekomme ich Hoffnung ?</option>
+                    </select>
+                    <button id="btn_frage" type="button">senden</button>
+                </form>
+
+            </div>
 
         </div>
-
-        </p>
         
         <script src="/static/js/chat_musiker.js"></script>
     </body>
