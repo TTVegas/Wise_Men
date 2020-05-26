@@ -1,7 +1,9 @@
+//Benötigten Elemente der Chatrooms(HTML)
 var btn = document.getElementById("btn_frage");
 var chatFenster = document.getElementById("chatfenster");
 var select = document.getElementById("select");
 
+//AJAX Request - Lädt die gestellte Frage und die dazugehörende Antwort auf die Seite. (ohne reload)!
 btn.addEventListener("click", function() {
     
     var ourRequest = new XMLHttpRequest();
@@ -25,7 +27,15 @@ btn.addEventListener("click", function() {
     ourRequest.send();
 });
 
+//Rendert den selected Text und baut es in den Chatroom
+function renderHTML_frage(frage) {
+    var htmlString_frage = "";
+    htmlString_frage += "<div id='chat_frage'><h3>" + "<p>Du:</p></h3><h4>" + frage + "</h4></div>";
 
+    chatFenster.insertAdjacentHTML('beforeend', htmlString_frage);
+}
+
+//Rendert den JSON response zu HTML und baut es in den Chatroom
 function renderHTML_antwort(data) {
     var htmlString_antwort = "";
 
@@ -36,14 +46,7 @@ function renderHTML_antwort(data) {
     chatFenster.insertAdjacentHTML('beforeend', htmlString_antwort);
 }
 
-function renderHTML_frage(frage) {
-    var htmlString_frage = "";
-    htmlString_frage += "<div id='chat_frage'><h3>" + "<p>Du:</p></h3><h4>" + frage + "</h4></div>";
-
-    chatFenster.insertAdjacentHTML('beforeend', htmlString_frage);
-}
-
-
+//Erfasst die gestellte Frage und den response Text des Keywordfinders
 function getSelectedText(elementId) {
     var elt = document.getElementById(elementId);
 
@@ -53,9 +56,7 @@ function getSelectedText(elementId) {
     return elt.options[elt.selectedIndex].text;
 }
 
-
-//Trennt den satz und sucht nach stichwörtern
-
+//Trennt den Satz und sucht nach Stichwörtern
 function keyword_finder (param_frage) {
     var split_string = param_frage.split(" ")
     var keyword="null"
